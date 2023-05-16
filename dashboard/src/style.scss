@@ -1,0 +1,46 @@
+#relevantly-dashboard {
+    --primary-color: #2271b1;
+    --secondary-color: #111;
+    --border-color: #cfcccc;
+
+    max-width: calc(100% - 25px);
+}
+
+.relevantly-content-tab {
+    display: none;
+    padding: 2rem 25px;
+    max-width: 60%;
+
+    &.active {
+        display: block;
+        animation: transitionTab .4s ease-in forwards;
+    }
+
+    .relevantly-space-small {
+        margin-bottom: 20px;
+    }
+
+    .MuiInput-root {
+        border: 0;
+        max-width: 200px;
+
+        input {
+            max-width: 100%;
+            border: 0;
+            background: transparent;
+        }
+    }
+}
+
+@import './components/tabs/style';
+
+@keyframes transitionTab {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}

@@ -35,14 +35,9 @@ wp-config.php
 # htaccess
 /.htaccess
 
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
+# node modules
+/node_modules
+/dashboard/node_modules
 
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+# vendors
+/vendor/*

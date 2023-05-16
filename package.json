@@ -1,0 +1,25 @@
+{
+  "name": "Relevantly",
+  "version": "1.0.0",
+  "description": "This plugin can analyze the content of a user's website and automatically suggest related posts or pages to keep visitors engaged and increase their time on the site.",
+  "main": "src/index.js",
+  "author": "Aleksej Vukomanovic",
+  "license": "MIT",
+  "devDependencies": {
+    "@wordpress/scripts": "^26.4.0",
+    "css-loader": "^6.7.3",
+    "ignore-emit-webpack-plugin": "^2.0.6",
+    "mini-css-extract-plugin": "^2.7.5",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2"
+  },
+  "scripts": {
+    "start": "wp-scripts start src/index.js --output-path=assets/js",
+    "build": "wp-scripts build src/index.js --output-path=assets/js",
+    "dashboard:start": "yarn --cwd dashboard start",
+    "dashboard:build": "yarn --cwd dashboard run build",
+    "dashboard:init": "yarn --cwd dashboard install",
+    "build:css": "webpack --config webpack.scss.config.js --mode production",
+    "start:css": "webpack --config webpack.scss.config.js --mode development --watch"
+  }
+}

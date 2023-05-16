@@ -1,0 +1,36 @@
+.relevantly-tabs {
+
+    &__navs {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 2rem 0 1px 10px;
+
+        &:after {
+            position: absolute;
+            content: " ";
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        &-item {
+            padding: 15px 25px;
+            margin-right: 3px;
+            border-radius: 10px 10px 0 0;
+            background-color: var(--border-color);
+            font-size: 16px;
+            color: var(--secondary-color);
+            cursor: pointer;
+            transition: color .3s, background-color .3s;
+            
+            &.active,
+            &:hover {
+                background-color: var(--primary-color);
+                color: #fff;
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+#relevantly-dashboard {
+  --primary-color: #2271b1;
+  --secondary-color: #111;
+  --border-color: #cfcccc;
+  max-width: calc(100% - 25px);
+}
+
+.relevantly-content-tab {
+  display: none;
+  padding: 2rem 25px;
+  max-width: 60%;
+}
+.relevantly-content-tab.active {
+  display: block;
+  animation: transitionTab 0.4s ease-in forwards;
+}
+.relevantly-content-tab .relevantly-space-small {
+  margin-bottom: 20px;
+}
+.relevantly-content-tab .MuiInput-root {
+  border: 0;
+  max-width: 200px;
+}
+.relevantly-content-tab .MuiInput-root input {
+  max-width: 100%;
+  border: 0;
+  background: transparent;
+}
+
+.relevantly-tabs__navs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 2rem 0 1px 10px;
+}
+.relevantly-tabs__navs:after {
+  position: absolute;
+  content: " ";
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+}
+.relevantly-tabs__navs-item {
+  padding: 15px 25px;
+  margin-right: 3px;
+  border-radius: 10px 10px 0 0;
+  background-color: var(--border-color);
+  font-size: 16px;
+  color: var(--secondary-color);
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+.relevantly-tabs__navs-item.active, .relevantly-tabs__navs-item:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+@keyframes transitionTab {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/
