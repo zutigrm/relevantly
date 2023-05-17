@@ -22,6 +22,8 @@ class DashboardPage {
 
 	static function relevantly_render_dashboard_page() {
 		echo '<div id="relevantly-dashboard"></div>';
+
+		do_action( 'relevantly_after_dashboard' );
 	}
 
 	static function enqueue_dashboard_scripts( $hook_suffix ) {

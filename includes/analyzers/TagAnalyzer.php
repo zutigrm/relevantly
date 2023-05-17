@@ -12,6 +12,12 @@ class TagAnalyzer implements ContentAnalyzerInterface {
 			}
 		}
 		
-		return $tag_ids;
+		/**
+		 * Filter the results after tags are
+		 * extracted from the post
+		 * @param $tag_ids array resulting array of category term ids
+		 * @param $content_id int current post ID
+		 */
+		return apply_filters( 'relevantly_analyzed_tag_ids', $tag_ids, $content_id );
 	}
 }

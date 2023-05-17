@@ -29,6 +29,6 @@ class Word2VecAnalyzer implements ContentAnalyzerInterface
 
     private function extract_keywords($content)
     {
-        // @TODO Implement keyword extraction here, e.g., using the KeywordAnalyzer
+        // Implement keyword extraction here, e.g., using the KeywordAnalyzer
     }
 }

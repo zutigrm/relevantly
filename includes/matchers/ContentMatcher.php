@@ -77,7 +77,13 @@ class ContentMatcher implements ContentMatcherInterface {
 		// use selectewd strategy
 		$related_posts = $matcher->find_related_content( $content_id, $keywords, $limit )->get_results();
 		
-		$this->results = $related_posts;
+		/**
+		 * FInal related posts array after being matched by selected strategy
+		 * @param related_posts array resulting array of matched posts ids
+		 * @param content_id int current post ID
+		 * @param strategy string name of the selected strategy
+		 */
+		$this->results = apply_filters( 'relevantly_related_posts_matched_results', $related_posts, $content_id, $this->strategy );
 
 		return $this;
 	}
@@ -129,6 +135,12 @@ class ContentMatcher implements ContentMatcherInterface {
 			}
 		}
 
-		$this->results = $related_posts;
+		/**
+		 * Final related posts array after being matched by selected strategy
+		 * @param related_posts array resulting array of matched posts ids
+		 * @param content_id int current post ID
+		 * @param strategy string name of the selected strategy
+		 */
+		$this->results = apply_filters( 'relevantly_related_posts_matched_results', $related_posts, $content_id, $this->strategy );
 	}
 }

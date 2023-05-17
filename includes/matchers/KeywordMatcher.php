@@ -42,7 +42,12 @@ class KeywordMatcher implements ContentMatcherInterface {
 			$limit
 		);
 
-		$this->results = $related_posts;
+		/**
+		 * Related posts array matched by keywords
+		 * @param related_posts array resulting array of matched posts ids
+		 * @param content_id int current post ID
+		 */
+		$this->results = apply_filters( 'relevantly_related_posts_by_keywords', $related_posts, $content_id );
 
 		return $this;
 	}

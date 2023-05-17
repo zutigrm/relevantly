@@ -8,12 +8,20 @@ class CategoryAnalyzer implements ContentAnalyzerInterface {
 
 		if ( ! empty( $categories ) )
 		{
-			return array_map(
+			$results = array_map(
 				function ( $category ) {
 					return $category->term_id;
 				},
 				$categories
 			);
+
+			/**
+			 * Filter for returned results after
+			 * extracting categories from the post
+			 * @param results array resulting array of category term ids
+			 * @param content_id int current post ID
+			 */
+			return apply_filters( 'relevantly_analyzed_categories_ids', $results, $content_id );
 		}
 
 		return [];
